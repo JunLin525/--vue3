@@ -1,6 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id ="app">
+
+          <div class="container">
+        <div class="item_header">
+            <div class="item_detail">商品</div>
+            <div class="price">單價</div>
+            <div class="count">數量</div> 
+            <div class="amount">總計</div>
+            <div class="operate">操作</div>
+        </div>
+        <HelloWorld />
+
+        </div>
+    </div> 
 </template>
 
 <script>
@@ -10,11 +22,11 @@ export default {
   name: 'App',
   components: {
     HelloWorld
-  }
+  },
 }
 </script>
 
-<style>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +34,43 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.item_header {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+.item_header div {
+  width: 200px;
+  color: #888;
+  line-height: 30px;
+}
+
+.item_header .item_detail {
+  width: 50%;
+}
+
+.item_body {
+  margin-top: 20px;
+  height: 100px;
+  align-items: center;    
+}
+
+.item_detail img {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  float: left;
+}
+
+.item_detail .name {
+  margin-left: 100px;
+  margin-top: 20px;
 }
 </style>
