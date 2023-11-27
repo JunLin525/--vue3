@@ -10,6 +10,7 @@
               <div class="price"><span>$</span>{{item.price}}</div>
               <div class="count">
                   <button @click="handleSub(item)">-</button>
+                  <button @click="$event => handleSetTen(item)">10</button>
                   {{item.count}}
                   <button @click="handlePlus(item)">+</button>
               </div> 
@@ -24,9 +25,17 @@
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   methods:{
+    handleSetTen:function(item){
+      console.log(item);
+      if(item.count<10)
+        item.count=10;
+      else
+        item.count+=10;
+    },
     handlePlus: function(item){
     console.log(item);
     item.count++;
